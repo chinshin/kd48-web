@@ -1,0 +1,35 @@
+{
+    "editor.fontSize": 20,
+    "files.autoSave": "off",
+    "eslint.autoFixOnSave": true,
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "michelemelluso.code-beautifier"
+    },
+    "eslint.enable": true,
+    "eslint.run": "onType",
+    "eslint.options": {
+      "extensions": [".js", ".jsx"]
+    },
+    "eslint.validate": [
+      "javascriptreact",
+      "javascript",
+      {
+        "language": "jsx",
+        "autoFix": true
+      },
+      "html",
+      {
+        "language": "html",
+        "autoFix": true
+      }
+    ],
+    "vetur.format.defaultFormatterOptions": {
+      "prettier": {
+        "semi": false,
+        "singleQuote": true
+      }
+    }
+  }
