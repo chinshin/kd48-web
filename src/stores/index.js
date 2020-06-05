@@ -1,11 +1,16 @@
-import {
-  createStore, combineReducers, applyMiddleware, compose
-} from 'redux';
-import { createLogger } from 'redux-logger';
-import testReducer from '../reducers/index';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
+import testReducer from '../reducers';
 
-const middlewares = applyMiddleware(createLogger());
+const initState = {};
 
-const store = createStore(testReducer, middlewares);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+  : compose;
+
+const enhancer = composeEnhancers(applyMiddleware(thunk, logger));
+
+const store = createStore(testReducer, initState, enhancer);
 
 export default store;

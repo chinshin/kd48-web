@@ -13,9 +13,18 @@ module.exports = {
     rules: [
       {
         test: /\.js$/, // 匹配.js文件
+        include: [path.resolve(__dirname, 'src')],
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.js$/, // 匹配.js文件
+        include: [path.resolve(__dirname, 'src')],
+        exclude: /node_modules/,
+        use: {
+          loader: 'eslint-loader',
         },
       },
       {
@@ -47,7 +56,4 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(), // HMR允许在运行时更新各种模块，而无需进行完全刷新
   ],
-  eslint: { // eslint配置文件
-    configFile: './.eslintrc.js',
-  },
 };

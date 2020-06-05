@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.scss';
 
@@ -26,21 +26,31 @@ function App() {
   );
 }
 
+// eslint-disable-next-line arrow-body-style
 const mapStateToProps = (state, ownProps) => {
   return {
-    user: _.find(state.userList, {id: ownProps.userId})
+    test: { ...state, ...ownProps },
   };
 };
 
+// eslint-disable-next-line no-unused-vars
 const mapDispatchToProps = (dispatch, ownProps) => {
+  const { test } = ownProps || {};
   return {
-    increase: (...args) => dispatch(actions.increase(...args)),
-    decrease: (...args) => dispatch(actions.decrease(...args))
+    test,
+    // increase: (...args) => dispatch(actions.increase(...args)),
+    // decrease: (...args) => dispatch(actions.decrease(...args)),
   };
 };
 
+// eslint-disable-next-line arrow-body-style
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
   // TODO
+  return {
+    ...stateProps,
+    ...dispatchProps,
+    ...ownProps,
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(App);
