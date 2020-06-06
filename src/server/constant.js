@@ -13,6 +13,12 @@ const salt = 'K4bMWJawAtnyyTNOa70S';
 
 const loginEndpoint = 'https://pocketapi.48.cn/user/api/v1/login/app/mobile';
 const searchMemberEndpoint = 'https://pocketapi.48.cn/im/api/v1/im/search';
+const roomOwnerMsgEndpoint = 'https://pocketapi.48.cn/im/api/v1/chatroom/msg/list/homeowner';
+const roomAllMsgEndpoint = 'https://pocketapi.48.cn/im/api/v1/chatroom/msg/list/all';
+const liveDetailEndpoint = 'https://pocketapi.48.cn/live/api/v1/live/getLiveOne';
+const liveListEndpoint = 'https://pocketapi.48.cn/live/api/v1/live/getLiveList';
+const memberListEndpoint = 'https://pocketapi.48.cn/user/api/v1/client/update/group_team_star';
+const answerDetailEndponit = 'https://pocketapi.48.cn/idolanswer/api/idolanswer/v1/question_answer/detail';
 
 module.exports = {
   commonHeader,
@@ -20,5 +26,11 @@ module.exports = {
   endpoint: {
     loginURL: loginEndpoint,
     searchMemberURL: searchMemberEndpoint,
+    roomMsgByOwnerURL: roomOwnerMsgEndpoint,
+    roomMsgAllURL: roomAllMsgEndpoint,
+    liveDetailURL: liveDetailEndpoint,
+    liveHistoryURL: liveListEndpoint,
+    memberListURL: memberListEndpoint,
+    answerDetailURL: answerDetailEndponit,
   },
 };
