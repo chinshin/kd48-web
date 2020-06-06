@@ -6,7 +6,7 @@ const util = require('./util');
 const constant = require('./constant');
 
 const { commonHeader, endpoint } = constant;
-const { loginURL } = endpoint;
+const { loginURL, searchMemberURL } = endpoint;
 
 
 const fetchToken = (req, res) => {
@@ -29,6 +29,26 @@ const fetchToken = (req, res) => {
     });
 };
 
+const searchMember = (req, res) => {
+  const { memberName } = req.body;
+  const resources = {
+    name: memberName,
+  };
+  const options = {
+    method: 'POST',
+    headers: { ...commonHeader, pa: util.computePA() },
+  };
+  fetchJson.post(searchMemberURL, resources, options)
+    .then((data) => {
+      const { content: { data: memberList } = {} } = data || {};
+      res.json({ memberList });
+    })
+    .catch((e) => {
+      res.json(e);
+    });
+};
+
 module.exports = {
   fetchToken,
+  searchMember,
 };

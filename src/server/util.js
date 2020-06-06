@@ -26,9 +26,10 @@ const computePA = () => {
   const { salt } = constant;
   const hashContent = utf8.encode(`${stamptime}${randomInt}${salt}`);
   const hashResult = crypto.createHash('md5').update(hashContent).digest('hex');
-  const paContent = utf8.encode(`${stamptime}${randomInt}${hashResult}`);
-  const pa = Buffer.from(paContent).toString('base64');
-  return pa;
+  const paContent = utf8.encode(`${stamptime},${randomInt},${hashResult}`);
+  const paUtf8 = utf8.encode(paContent);
+  const paBase64 = Buffer.from(paUtf8).toString('base64');
+  return paBase64;
 };
 
 module.exports = {

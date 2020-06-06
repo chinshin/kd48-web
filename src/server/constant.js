@@ -12,11 +12,13 @@ const commonHeader = {
 const salt = 'K4bMWJawAtnyyTNOa70S';
 
 const loginEndpoint = 'https://pocketapi.48.cn/user/api/v1/login/app/mobile';
+const searchMemberEndpoint = 'https://pocketapi.48.cn/im/api/v1/im/search';
 
 module.exports = {
   commonHeader,
   salt,
   endpoint: {
     loginURL: loginEndpoint,
+    searchMemberURL: searchMemberEndpoint,
   },
 };

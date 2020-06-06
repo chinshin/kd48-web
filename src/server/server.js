@@ -13,6 +13,7 @@ router.use((req, res, next) => {
   next();
 });
 router.post('/user/fetchToken', kd48API.fetchToken);
+router.post('/search/member', kd48API.searchMember);
 
 app.use('/api', router);
 app.listen(3002, () => {
