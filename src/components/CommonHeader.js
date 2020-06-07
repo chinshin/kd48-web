@@ -62,7 +62,7 @@ const CommonHeader = (props) => {
                 {t('kd48WebTool')}
               </HeaderName>
               <HeaderNavigation aria-label={`CHINSHIN${t('kd48WebTool')}${t('version')}`}>
-                <HeaderMenuItem href={constantVal.githubLink}>{t('githubLink')}</HeaderMenuItem>
+                <HeaderMenuItem href={constantVal.githubLink} target="_blank">{t('githubLink')}</HeaderMenuItem>
                 {/* <HeaderMenuItem onClick={() => {}}>
                   {t('importSettings')}
                 </HeaderMenuItem>
