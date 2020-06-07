@@ -4,6 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
+  devtool: 'cheap-module-eval-source-map',
   entry: './src/index.js',
   output: {
     filename: 'kd48-web-bundle.js',
@@ -54,6 +55,7 @@ module.exports = {
       template: './public/index.html',
       filename: path.resolve(__dirname, 'dist/index.html'),
     }),
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(), // HMR允许在运行时更新各种模块，而无需进行完全刷新
   ],
 };

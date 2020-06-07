@@ -1,6 +1,4 @@
 const fetchJson = require('fetch-json');
-const utf8 = require('utf8');
-const crypto = require('crypto');
 
 const util = require('./util');
 const constant = require('./constant');
@@ -19,7 +17,7 @@ const fetchToken = (req, res) => {
     pwd,
   };
   if (!mobile || !pwd) {
-    res.json({});
+    res.status(500).json({});
     return;
   }
   const options = {
@@ -32,7 +30,7 @@ const fetchToken = (req, res) => {
       res.json({ token });
     })
     .catch((e) => {
-      res.json(e);
+      res.status(500).json(e);
     });
 };
 

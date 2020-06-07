@@ -22,6 +22,6 @@ router.post('/member/all', kd48API.fetchMemberList);
 router.post('/question/detail', kd48API.fetchAnswerDetail);
 
 app.use('/api', router);
-app.listen(3002, () => {
+app.listen(3001, () => {
   // TODO
 });

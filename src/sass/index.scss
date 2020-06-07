@@ -1,0 +1,35 @@
+.kd48-web-container {
+    @import '~carbon-components/scss/components/ui-shell/content';
+    @import '~carbon-components/scss/components/ui-shell/functions';
+    @import '~carbon-components/scss/components/ui-shell/header-panel';
+    @import '~carbon-components/scss/components/ui-shell/header';
+    @import '~carbon-components/scss/components/ui-shell/navigation-menu';
+    @import '~carbon-components/scss/components/ui-shell/product-switcher';
+    @import '~carbon-components/scss/components/ui-shell/side-nav';
+    @import '~carbon-components/scss/components/ui-shell/switcher';
+    @import '~carbon-components/scss/components/ui-shell/theme';
+    @import '~carbon-components/scss/components/ui-shell/ui-shell';
+    @import '~carbon-components/scss/components/ui-shell/variables';
+    @import '~carbon-components/scss/components/form/form';
+    @import '~carbon-components/scss/components/text-input/text-input';
+    @import '~carbon-components/scss/components/button/button';
+    @import '~carbon-components/scss/components/toggle/toggle';
+    @import '~carbon-components/scss/components/number-input/number-input';
+    @import '~carbon-components/scss/components/inline-loading/inline-loading';
+
+    .kd48-web-content {
+        padding: 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        padding: 2rem;
+        position: relative;
+        z-index: 0;
+        width: 100%;
+    }
+
+    @import './setting';
+}

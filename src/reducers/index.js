@@ -1,13 +1,12 @@
-const initialState = {
-  testCount: 0,
-};
+import { combineReducers } from 'redux';
 
-const testReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'TEST_ACTION': {
-      return { ...state };
-    }
-    default: return state;
-  }
-};
-export default testReducer;
+import PageReducer from './PageReducer';
+import SettingsReducer from './SettingsReducer';
+
+
+const kd48Reducer = combineReducers({
+  PageReducer,
+  SettingsReducer,
+});
+
+export default kd48Reducer;

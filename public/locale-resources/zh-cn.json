@@ -1,0 +1,41 @@
+{
+    "version": "v0.1.1",
+
+    "commonHeader": "通用头部导航栏",
+    "openMenu": "打开头部导航栏菜单",
+    "kd48WebTool": "[口袋48web工具]",
+    "githubLink": "Github链接",
+    "importSettings": "导入设置",
+    "exportSettings": "导出设置",
+    "sideNavigation": "侧导航栏",
+    "settings": "设置",
+    "dashboard": "仪表盘",
+
+    "idolInfo": "小偶像信息",
+    "idolName": "小偶像-姓名",
+    "idolUserId": "小偶像-用户ID",
+    "idolRoomId": "小偶像-房间ID",
+
+    "userInfo": "用户信息",
+    "userMobile": "用户手机号",
+    "userPassword": "用户密码",
+    "userToken": "用户Token",
+    "fetchToken": "获取token",
+    "fetchTokenInProgress": "正在获取token",
+
+    "roomListener": "口袋房间监控",
+    "roomListenerInterval": "口袋房间监听间隔(>=5s || <=60s)",
+    "roomListenerIntervalInvalidDesc": "口袋房间监听间隔必须>=5s或<=60s",
+
+    "qqGroupBrodcast": "QQ群播报",
+    "qqGroupList": "QQ群列表（支持多群播报，群id之间用半角分号“;”隔开）",
+
+    "wbMonitor": "微博监控",
+    "wbMonitorInterval": "微博监控间隔(>=60s || <=600s)",
+    "wbContainerId": "微博ContainerID",
+    "wbContainerUrl": "微博ContainerUrl",
+
+    "save": "保存",
+    "reset": "重置"
+
+}
